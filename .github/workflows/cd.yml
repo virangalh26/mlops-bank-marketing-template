@@ -20,6 +20,7 @@ concurrency:
 env:
   DAGSHUB_OWNER: ${{ vars.DAGSHUB_OWNER }}
   DAGSHUB_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
+  DAGSHUB_REPO: ${{ vars.DAGSHUB_REPO || 'mlops-bank-marketing' }}
   APP_NAME: ca-bank-marketing
   RESOURCE_GROUP: rg-mlops-workshop
 
