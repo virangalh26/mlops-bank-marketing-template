@@ -14,7 +14,7 @@ doctor:  ## check that everything the workshop needs is ready
 	@echo "=== All checks passed ==="
 
 dvc-auth:  ## point DVC at YOUR DagsHub repo and store your login (in .dvc/config.local, not in git)
-	uv run dvc remote modify origin --local url "https://dagshub.com/$$DAGSHUB_OWNER/mlops-bank-marketing.dvc"
+	uv run dvc remote modify origin --local url "https://dagshub.com/$$DAGSHUB_OWNER/$${DAGSHUB_REPO:-mlops-bank-marketing}.dvc"
 	uv run dvc remote modify origin --local auth basic
 	uv run dvc remote modify origin --local user "$$DAGSHUB_OWNER"
 	uv run dvc remote modify origin --local password "$$DAGSHUB_TOKEN"

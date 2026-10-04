@@ -13,6 +13,7 @@ permissions:
 env:
   DAGSHUB_OWNER: ${{ vars.DAGSHUB_OWNER }}
   DAGSHUB_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
+  DAGSHUB_REPO: ${{ vars.DAGSHUB_REPO || 'mlops-bank-marketing' }}
 
 jobs:
   check:
